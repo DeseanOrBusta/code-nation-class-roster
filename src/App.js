@@ -54,9 +54,11 @@ export default function App() {
   );
 }
 
-function displayPerson(first,last)
+function displayPerson(first,last){
+  <div class="names">(first, last)</div>
+}
 
-export default function app() {
+export default function app(){
   let people= [
     ["lily","Minchala"]
     ["Luna","Marcelino"]
@@ -64,7 +66,12 @@ export default function app() {
   ];
 
   let elements = [];
-  for (let person of people){
-    let 
+  for (let person of people) {
+    let first = person[0]
+    let last = person[1]
+    elements.push(displayPerson(first, last));
+  }
+
+  return (<div> {elements} </div>);
   }
 }
