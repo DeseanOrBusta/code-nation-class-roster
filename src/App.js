@@ -14,6 +14,11 @@ function Person(name, pronouns, school, year, color, social, animal, nickname) {
     </div>
   );
 }
+
+function colgate(chicken, drop) {
+  return <div>hi</div>;
+}
+
 export default function App() {
   const lily = Person(
     "Lilly Minchala",
@@ -45,33 +50,23 @@ export default function App() {
     "Dogs",
     "Busta"
   );
-  return (
-    <div className="App">
-      {lily}
-      {claudia}
-      {Desean}
-    </div>
-  );
-}
 
-function displayPerson(first,last){
-  <div class="names">(first, last)</div>
-}
-
-export default function app(){
-  let people= [
-    ["lily","Minchala"]
-    ["Luna","Marcelino"]
-    ["Desean","Blackburn"]
+  let people = [
+    ["lily", "Minchala"],
+    ["Luna", "Marcelino"],
+    ["Desean", "Blackburn"]
   ];
 
   let elements = [];
   for (let person of people) {
-    let first = person[0]
-    let last = person[1]
-    elements.push(displayPerson(first, last));
+    // string1 + string2
+    // person[0] == first name
+    // person[1] == last name
+    elements.push(colgate(person));
+    // let
   }
 
-  return (<div> {elements} </div>);
-  }
+  return <div className="App">{elements}</div>;
 }
+
+// function displayPerson(first,last)
